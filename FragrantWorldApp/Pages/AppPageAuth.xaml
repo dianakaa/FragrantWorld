@@ -1,0 +1,69 @@
+﻿<Page x:Class="FragrantWorldApp.Pages.AppPageAuth"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:FragrantWorldApp.Pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="AppPageAuth">
+
+    <StackPanel>
+        <StackPanel Orientation="Horizontal" Width="800" HorizontalAlignment="Right">
+            <Button x:Name="LogoutButton" Click="LogoutButton_Click"
+                Content="Выйти"
+                Margin="40,0,0,0"
+                Height="40" Width="120"
+                FontFamily="Comic Sans MS" FontSize="18" 
+                BorderBrush="Brown" Background="#FFCC99" Foreground="Brown" BorderThickness="5,5,5,5"/>
+            <Button x:Name="ChangeOrdersButton" Click="ChangeOrdersButton_Click"
+                Content="Работа с заказами"
+                Margin="20,20,20,20"
+                Height="40" Width="160"
+                FontFamily="Comic Sans MS" FontSize="18" 
+                BorderBrush="Brown" Background="#FFCC99" Foreground="Brown" BorderThickness="5,5,5,5"/>
+            <Label x:Name="UserInfoLabal" 
+               Width="400" Height="40"
+               FontFamily="Comic Sans MS" FontSize="16"
+               Foreground="Brown"
+               Margin="40,0,40,0">
+            </Label>
+        </StackPanel>
+        
+        <ListBox Name="ProductsListBox">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Border BorderBrush="Brown" BorderThickness="2" 
+                    Margin="40,20,40,20">
+                        <StackPanel Orientation="Vertical" Margin="5" Width="800">
+                            <TextBlock Text="{Binding ProductName}" 
+                           Margin="20,0,0,20"
+                           FontFamily="Comic Sans MS" FontSize="16" FontWeight="Bold"
+                           Foreground="Brown"/>
+                            <TextBlock Text="{Binding ProductDescription}"
+                               Margin="20,0,0,0"
+                               TextWrapping="Wrap"
+                               FontFamily="Comic Sans MS" FontSize="16"
+                               Foreground="#FFFFCC99"/>
+                            <TextBlock Text="{Binding ProductManufacturer}"
+                               Margin="20,0,0,20"
+                               TextWrapping="Wrap"
+                               FontFamily="Comic Sans MS" FontSize="16"
+                               Foreground="#FFFFCC99"/>
+                            <TextBlock Text="{Binding ProductCost, StringFormat='{}{0:F2} ₽'}"
+                               Margin="20,0,0,20"
+                               FontFamily="Comic Sans MS" FontSize="16"
+                               Foreground="Brown"/>
+
+                            <Button Content="Заказать"
+                            Height="40"
+                            Margin="0,0,20,20" HorizontalAlignment="Right"
+                            FontFamily="Comic Sans MS" FontSize="16"
+                            Foreground="#FFFFCC99" Background="Brown" Width="120"/>
+                        </StackPanel>
+                    </Border>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+    </StackPanel>
+</Page>
