@@ -9,11 +9,11 @@
       Title="AuthorizationPage">
 
     <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Background="White" >
-        <Label Content="Вход" 
+        <Label Content="Ароматный мир" 
         HorizontalAlignment="Center" Margin="0,20,0,0" 
-        FontFamily="Comic Sans MS" FontSize="36" 
+        FontFamily="Comic Sans MS" FontSize="40" 
         Foreground="Brown"/>
-
+        <Image Height="100" Source="/Image/logo.png"/>
         <Label Content="Логин" 
         Margin="20,0,0,0" 
         Height="40"
